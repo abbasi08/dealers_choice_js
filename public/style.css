@@ -21,22 +21,24 @@ a {
 }
 
 small {
-  color: #828282;
+  color: gray;
 }
 
 header {
-  background-color: #6b32e1;
-  color: #fff;
+  background-color: dodgerBlue;
+  color: white;
+  font-size: 18pt; 
   padding: 3px;
-  height: 26px;
+  height: 65px;
+  text-align: center;
 }
 
 header > img {
   margin-right: 10px;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 30px;
   border: 1px white solid;
-  vertical-align: bottom;
+  vertical-align: center;
 }
 
 form {

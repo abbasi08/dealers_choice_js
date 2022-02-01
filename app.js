@@ -6,6 +6,7 @@ const app = express();
 app.use(morgan('dev')); 
 app.use(express.static('public')); 
 
+
 app.get('/', (req, res) => {
     const books = bookData.list();
     const html = `<!DOCTYPE html>
@@ -16,12 +17,12 @@ app.get('/', (req, res) => {
   </head>
   <body>
     <div class="book-list">
-      <header><img src="/logo.png"/>9 Best Polyamory Books on Consensual Non-Monogamy</header>
+      <header><img src="/poly_logo2.jpg"/>9 Best Polyamory Books on Consensual Non-Monogamy</header>
       ${books.map(book => `
         <div class='book-item'>
           <p>
-            <span class="book-position">${book.id}. ▲</span>${book.title}
-            <small>(by ${book.author})</small>
+            <span class="book-position">${book.id}. ▲ </span>${book.title}
+            <small>by ${book.author}</small>
           </p>
         </div>`
       ).join('')}
@@ -33,7 +34,6 @@ res.send(html)
 }); 
 
 
-//app.listen(3000)
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`App listening in port ${PORT}`)
