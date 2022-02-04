@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
             </body>
         </html>`
 
-res.send(html)
+    res.send(html)
 }); 
 
 
